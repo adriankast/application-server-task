@@ -1,4 +1,4 @@
-const distributeApplications = require("../index").distributeApplications
+const distributeApplications = require("../index")
 const Server = require("../index").Server
 
 const applications = [

@@ -1,7 +1,7 @@
 /**
  * Map existing applications to new Server requirements
- * @param {array} applications Array of type RessourceSpecification
- * @param {object} newServerSpecification Specification of type RessourceSpecification
+ * @param {array} applications Array of applications
+ * @param {object} newServerSpecification Specification of server type
  */
 function distributeApplications(applications, newServerSpecification) {
 
@@ -50,4 +50,6 @@ function Server(serverSpecification, applicationIndex, application) {
     this.addApplicationToServer(application, applicationIndex)
 }
 
-module.exports = {distributeApplications, addApplicationToServer, Server}
+module.exports = distributeApplications
+module.exports.addApplicationToServer = addApplicationToServer
+module.exports.Server = Server
